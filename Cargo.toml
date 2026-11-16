@@ -1,0 +1,10 @@
+[package]
+name = "SigmaOS-aliases"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "SigmaOS aliases component"
+
+[lib]
+name = "aliases"
+path = "src/lib.rs"
