@@ -3,7 +3,7 @@ name = "SigmaOS-aliases"
 tier = 2
 stability = "scaffold"
 language = "rust"
-description = "aliases component"
+description = "Shell aliases: command shortcut expansion"
 upstream = []
 
 [contract]
