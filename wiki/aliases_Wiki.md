@@ -1,65 +1,50 @@
-# SigmaOS-aliases Component Wiki
+# SigmaOS-SigmaOS-aliases Component Wiki
 
 ## Overview
-SigmaOS-aliases provides multiple shell alias and command shortcut management support for the SigmaOS operating system. It demonstrates the shell alias subsystem and multiple command shortcuts within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic aliases initialization.
+SigmaOS-SigmaOS-aliases provides Shell aliases: command shortcut expansion for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
 - Single Responsibility
-- Aliases Abstraction
-- Fail-Fast on Aliases Initialization Errors
-- Deterministic Aliases Setup
-- Clear Abstraction Over Aliases APIs
-- Composition over Inheritance for aliases extensions
+- SigmaOS-aliases Abstraction
+- Fail-Fast on SigmaOS-aliases Initialization Errors
+- Deterministic SigmaOS-aliases Setup
+- Clear Abstraction Over SigmaOS-aliases APIs
+- Composition over Inheritance for SigmaOS-aliases extensions
 
 ## Architecture
-SigmaOS-aliases follows an aliases pattern:
-- **Aliases Core**: Provides multiple command alias management, shortcut registration, and shell integration
-- **Shell Integration**: Supports bash, zsh, and other shell multiple aliases configuration and loading
-- **Shortcut Management**: Supports multiple command shortcuts, multiple alias definitions, and shortcut persistence
-- **Error Handling**: Fail-fast on invalid aliases configurations or unsupported shell types
+SigmaOS-SigmaOS-aliases follows a SigmaOS-aliases pattern:
+- **SigmaOS-aliases Core**: Provides SigmaOS-aliases support, SigmaOS-aliases management, and SigmaOS-aliases tracking
+- **Management**: Supports SigmaOS-aliases management, SigmaOS-aliases configuration, and SigmaOS-aliases lifecycle
+- **Tracking**: Supports SigmaOS-aliases status, SigmaOS-aliases tracking, and SigmaOS-aliases lifecycle
+- **Error Handling**: Fail-fast on invalid SigmaOS-aliases configurations or unsupported SigmaOS-aliases types
 
 ## API
 The component provides the following public APIs:
-- `aliases::define(name, command)` - Define a shell alias with given name and command
-- `aliases::execute(alias)` - Execute a defined shell alias
-- `aliases::list()` - List all defined shell aliases
-- `aliases::status::active()` - Get aliases status and active aliases
-- Error types for aliases failure scenarios or unsupported shell types
+-  - Manage a SigmaOS-aliases by given configuration
+-  - Register a SigmaOS-aliases by given name
+-  - Get SigmaOS-aliases status and SigmaOS-aliases availability
+-  - Track SigmaOS-aliases management and SigmaOS-aliases tracking
+- Error types for SigmaOS-aliases failure scenarios or unsupported SigmaOS-aliases types
 
 ## Test Structure (Arrange-Act-ASSERT)
 All tests follow the AAA pattern:
-1. **Arrange**: Set up test environment with specific aliases configuration
-2. **Act**: Execute the code under test (multiple alias definition, multiple alias execution)
-3. **Assert**: Verify the expected aliases results
+1. **Arrange**: Set up test environment with specific SigmaOS-aliases configuration
+2. **Act**: Execute the code under test (SigmaOS-aliases init, SigmaOS-aliases management)
+3. **Assert**: Verify the expected SigmaOS-aliases results
 
 Example:
-```rust
-#[test]
-fn test_aliases_define_aaa() {
-    // Arrange
-    let alias_name = "ls";
-    let alias_command = "ls -la --color=auto";
-    
-    // Act
-    let result = aliases::define(alias_name, alias_command);
-    
-    // Assert
-    assert!(result.is_ok());
-    let defined = result.unwrap();
-    assert!(defined.is_valid());
-}
-```
+
 
 ## Development
-- Follows Rust best practices with `#![forbid(unsafe_code)]`
-- Aliases initialization is best-effort; gracefully degrades on unsupported configurations
-- Comprehensive error types for all aliases failure scenarios
-- Unit tests provided for multiple alias definition and multiple alias execution
-- Integration tests for full aliases system with actual shell integration
+- Follows Rust best practices with 
+- SigmaOS-aliases initialization is best-effort; gracefully degrades on unsupported configurations
+- Comprehensive error types for all SigmaOS-aliases failure scenarios
+- Unit tests provided for SigmaOS-aliases management and configuration
+- Integration tests for full SigmaOS-aliases system with actual SigmaOS-aliases integration
 
 ## TODO
-- Add support for additional shell types (bash, zsh, fish)
-- Expand shortcut management capabilities (persistent aliases, alias groups, alias inheritance)
-- Add aliases customization features (alias categories, alias descriptions, alias validation)
-- Create integration tests with actual shell environments and aliases integration
-- Implement aliases persistence and aliases state management
+- Add support for additional SigmaOS-aliases types
+- Expand SigmaOS-aliases capabilities (SigmaOS-aliases features, SigmaOS-aliases configurations, SigmaOS-aliases tracking)
+- Add lifecycle features (SigmaOS-aliases tracking, SigmaOS-aliases lifecycle, SigmaOS-aliases propagation)
+- Create integration tests with actual SigmaOS-aliases systems and SigmaOS-aliases integration
+- Implement SigmaOS-aliases persistence and SigmaOS-aliases state management
